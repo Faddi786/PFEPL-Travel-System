@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./static/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <form method="POST" action="auth.php?action=login">
+        <div class="login">
+
+            <div class="login-screen">
+                    <h3 class="app-title" style="margin-top: auto;text-align: left;margin-left: 5px;"><i class="fa fa-car-side" style="color: #1d6da3; margin-right: 10px; transform: scaleX(-1);"></i>
+                        Travel Management
+                    </h3>
+
+                <div class="table-title" style="display: block; text-align: center;">
+                    <img src="./static/logo/logo.png" alt="Logo" width="100" height="100" class="mx-5 my-2">
+                    <br>
+                </div>
+                <div class="app-title">
+                    <h2>Welcome</h2>
+                </div>
+                <div class="login-form">
+                    <div class="control-group">
+                        <input type="text" class="login-field" placeholder="Employee ID" id="login-ID" name="login-ID" required>
+                    </div>
+                    <div class="control-group">
+                        <input type="password" class="login-field" placeholder="password" id="login-pass"
+                            name="login-pass">
+                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large btn-block">Login</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        // Function to get query parameters
+        function getQueryParams() {
+            let params = {};
+            let queryString = window.location.search.slice(1);
+            let queries = queryString.split("&");
+            for (let i = 0; i < queries.length; i++) {
+                let pair = queries[i].split("=");
+                params[pair[0]] = decodeURIComponent(pair[1]);
+            }
+            return params;
+        }
+
+        // Check if there is an error parameter in the URL
+        window.onload = function () {
+            let params = getQueryParams();
+            if (params['error']) {
+                alert("Invalid username or password.");
+                // Clean the URL
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        };
+    </script>
+    <script src="https://kit.fontawesome.com/4bbef46563.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

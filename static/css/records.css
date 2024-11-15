@@ -1,0 +1,137 @@
+body {
+    background-color: #b3c9ed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.table-wrapper {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    margin-left: 0.5em;
+    display: inline-block;
+    width: 65% !important;
+}
+
+
+.row {
+    overflow-x: scroll; /* This ensures the scrollbar appears if content overflows */
+    white-space: nowrap; /* This prevents the content from wrapping to the next line */
+}
+/* WebKit-specific scrollbar styling */
+.row::-webkit-scrollbar {
+    height: 12px; /* Set the height of the horizontal scrollbar */
+}
+
+.table-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.table-title h2 {
+    font-weight: 700;
+    color: #343a40;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    margin-left: 15%;
+}
+
+.page-item.active .page-link {
+    z-index: 1 !important;
+}
+
+.dataTables_wrapper .dataTables_length label {
+    white-space: break-spaces !important;
+}
+
+/* tableRows css starts */
+.thumbnail {
+    width: 50px;
+    cursor: pointer;
+    height: 50px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add animation */
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.1)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* tableRows css ends */
+
+/* #travelrecords{
+    display: none;
+} */
+
+@media (max-width: 768px) {
+    .travel_title {
+        content: 'Travel Details';
+    }
+}

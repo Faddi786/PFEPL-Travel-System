@@ -30,17 +30,17 @@ ________________________________________
 
 1.	Journey Recording:
 
-o	Users (surveyors) fill out two forms for each trip:
+    o	Users (surveyors) fill out two forms for each trip:
 
 1.	Start Journey: Select project, vehicle, and record the starting meter reading with a photo upload.
 
 2.	End Journey: Submit the end meter reading with a photo upload.
 
-o	Ensures accurate data recording for every trip.
+    o	Ensures accurate data recording for every trip.
 
 2.	Admin Panel:
 
-o	Admins can manage:
+    o	Admins can manage:
 
 1.	Users (add, delete, edit).
 
@@ -48,29 +48,29 @@ o	Admins can manage:
 
 3.	Project assignments.
 
-o	View all submitted journey records.
+    o	View all submitted journey records.
 
-o	Generate detailed vehicle usage reports based on date ranges.
+    o	Generate detailed vehicle usage reports based on date ranges.
 
 3.	Finance Department Access:
 
-o	Direct access to vehicle usage reports.
+    o	Direct access to vehicle usage reports.
 
-o	Ability to generate reports without requiring admin intervention.
+    o	Ability to generate reports without requiring admin intervention.
 
 4.	Report Generation:
 
-o	Generates trip reports by combining start and end readings.
+    o	Generates trip reports by combining start and end readings.
 
-o	Includes photos, distance travelled, and project-specific details.
+    o	Includes photos, distance travelled, and project-specific details.
 
-o	Supports filtering by vehicle, project, or date range.
+    o	Supports filtering by vehicle, project, or date range.
 
 5.	Centralized Data Retention:
 
-o	Secure storage of all journey records in a MySQL database.
+    o	Secure storage of all journey records in a MySQL database.
 
-o	Historical data retrieval for auditing or analysis.
+    o	Historical data retrieval for auditing or analysis.
 
 
 
